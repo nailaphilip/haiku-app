@@ -3,12 +3,90 @@
     "7fe806fb00eb34bdbba90f796520f0fff75e3652fe": {
       "workers": {
         "app/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=true!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/login/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/create-haiku/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/page": "action-browser"
+        "app/page": "rsc",
+        "app/login/page": "rsc",
+        "app/_not-found/page": "rsc",
+        "app/create-haiku/page": "rsc"
+      }
+    },
+    "7f9654ae2845c834d360583deade199f4093ce53a4": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/login/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/create-haiku/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "rsc",
+        "app/login/page": "rsc",
+        "app/_not-found/page": "rsc",
+        "app/create-haiku/page": "rsc"
+      }
+    },
+    "7f3c18c619422cca097af9254f65d224da95f535e8": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/login/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/create-haiku/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "rsc",
+        "app/page": "rsc",
+        "app/login/page": "rsc",
+        "app/create-haiku/page": "rsc"
+      }
+    },
+    "7f1de4658113498759cc70b387c186cc538c88ddf6": {
+      "workers": {
+        "app/create-haiku/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FhaikuController.js%22%2C%5B%5B%227f1de4658113498759cc70b387c186cc538c88ddf6%22%2C%22createHaiku%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/create-haiku/page": "action-browser"
       }
     }
   },

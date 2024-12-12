@@ -17,13 +17,18 @@
         "app/create-haiku/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/edit-haiku/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
         "app/_not-found/page": "rsc",
-        "app/create-haiku/page": "rsc"
+        "app/create-haiku/page": "rsc",
+        "app/edit-haiku/[id]/page": "rsc"
       }
     },
     "7f9654ae2845c834d360583deade199f4093ce53a4": {
@@ -43,13 +48,18 @@
         "app/create-haiku/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/edit-haiku/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
         "app/_not-found/page": "rsc",
-        "app/create-haiku/page": "rsc"
+        "app/create-haiku/page": "rsc",
+        "app/edit-haiku/[id]/page": "rsc"
       }
     },
     "7f3c18c619422cca097af9254f65d224da95f535e8": {
@@ -69,13 +79,18 @@
         "app/create-haiku/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/edit-haiku/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fnailyaphilippova%2FDocuments%2FCoding%2Four%20haiku%20app%2Factions%2FuserController.js%22%2C%5B%5B%227f3c18c619422cca097af9254f65d224da95f535e8%22%2C%22login%22%5D%2C%5B%227f9654ae2845c834d360583deade199f4093ce53a4%22%2C%22logout%22%5D%2C%5B%227fe806fb00eb34bdbba90f796520f0fff75e3652fe%22%2C%22register%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
         "app/_not-found/page": "rsc",
         "app/page": "rsc",
         "app/login/page": "rsc",
-        "app/create-haiku/page": "rsc"
+        "app/create-haiku/page": "rsc",
+        "app/edit-haiku/[id]/page": "rsc"
       }
     },
     "7f1de4658113498759cc70b387c186cc538c88ddf6": {

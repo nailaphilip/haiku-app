@@ -101,7 +101,7 @@ export const deleteHaiku = async function (formData) {
   let haikuId = formData.get("id")
   if (typeof haikuId != "string") haikuId = ""
 
-  // make sure you are the auther of this post, otherwise have operation fail
+  // make sure you are the other of this post, otherwise have operation fail
   const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) })
   if (haikuInQuestion.author.toString() !== user.userId) {
     return redirect("/")
@@ -130,7 +130,7 @@ export const editHaiku = async function (prevState, formData) {
   let haikuId = formData.get("haikuId")
   if (typeof haikuId != "string") haikuId = ""
 
-  // make sure you are the author of this post, otherwise have operation fail
+  // make sure you are the other of this post, otherwise have operation fail
   const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) })
   if (haikuInQuestion.author.toString() !== user.userId) {
     return redirect("/")

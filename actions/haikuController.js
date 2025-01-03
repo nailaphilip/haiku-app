@@ -6,6 +6,7 @@ import { ObjectId } from "mongodb"
 import { getCollection } from "../lib/db"
 import cloudinary from "cloudinary"
 
+
 const cloudinaryConfig = cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -71,72 +72,114 @@ async function sharedHaikuLogic(formData, user) {
   }
 }
 
+
 export const createHaiku = async function (prevState, formData) {
-  const user = await getUserFromCookie()
+  try {
+    const user = await getUserFromCookie();
 
-  if (!user) {
-    return redirect("/")
+    if (!user) {
+      console.log("User not authenticated");
+      return redirect("/");
+    }
+
+    console.log("User authenticated:", user.userId);
+
+    const results = await sharedHaikuLogic(formData, user);
+
+    if (results.errors.line1 || results.errors.line2 || results.errors.line3) {
+      console.error("Validation errors:", results.errors);
+      return { errors: results.errors };
+    }
+
+    // Save into db
+    const haikusCollection = await getCollection("haikus");
+    const newHaiku = await haikusCollection.insertOne(results.ourHaiku);
+
+    console.log("Haiku created successfully:", newHaiku.insertedId);
+    return redirect("/");
+  } catch (error) {
+    console.error("Error creating haiku:", error);
+    return { error: "Failed to create haiku. Please try again later." };
   }
-
-  const results = await sharedHaikuLogic(formData, user)
-
-  if (results.errors.line1 || results.errors.line2 || results.errors.line3) {
-    return { errors: results.errors }
-  }
-
-  // save into db
-  const haikusCollection = await getCollection("haikus")
-  const newHaiku = await haikusCollection.insertOne(results.ourHaiku)
-  return redirect("/")
-}
+};
 
 export const deleteHaiku = async function (formData) {
-  const user = await getUserFromCookie()
+  try {
+    const user = await getUserFromCookie();
 
-  if (!user) {
-    return redirect("/")
+    if (!user) {
+      console.log("User not authenticated");
+      return redirect("/");
+    }
+
+    console.log("User authenticated:", user.userId);
+
+    const haikusCollection = await getCollection("haikus");
+    let haikuId = formData.get("id");
+    if (typeof haikuId !== "string") haikuId = "";
+
+    const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) });
+
+    if (!haikuInQuestion) {
+      console.error("Haiku not found:", haikuId);
+      return redirect("/");
+    }
+
+    if (haikuInQuestion.author.toString() !== user.userId) {
+      console.error("Unauthorized attempt to delete haiku:", haikuId);
+      return redirect("/");
+    }
+
+    await haikusCollection.deleteOne({ _id: ObjectId.createFromHexString(haikuId) });
+    console.log("Haiku deleted successfully:", haikuId);
+
+    return redirect("/");
+  } catch (error) {
+    console.error("Error deleting haiku:", error);
+    return { error: "Failed to delete haiku. Please try again later." };
   }
-
-  const haikusCollection = await getCollection("haikus")
-  let haikuId = formData.get("id")
-  if (typeof haikuId != "string") haikuId = ""
-
-  // make sure you are the auther of this post, otherwise have operation fail
-  const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) })
-  if (haikuInQuestion.author.toString() !== user.userId) {
-    return redirect("/")
-  }
-
-  await haikusCollection.deleteOne({ _id: ObjectId.createFromHexString(haikuId) })
-
-  return redirect("/")
-}
+};
 
 export const editHaiku = async function (prevState, formData) {
-  const user = await getUserFromCookie()
+  try {
+    const user = await getUserFromCookie();
 
-  if (!user) {
-    return redirect("/")
+    if (!user) {
+      console.log("User not authenticated");
+      return redirect("/");
+    }
+
+    console.log("User authenticated:", user.userId);
+
+    const results = await sharedHaikuLogic(formData, user);
+
+    if (results.errors.line1 || results.errors.line2 || results.errors.line3) {
+      console.error("Validation errors:", results.errors);
+      return { errors: results.errors };
+    }
+
+    const haikusCollection = await getCollection("haikus");
+    let haikuId = formData.get("haikuId");
+    if (typeof haikuId !== "string") haikuId = "";
+
+    const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) });
+
+    if (!haikuInQuestion) {
+      console.error("Haiku not found:", haikuId);
+      return redirect("/");
+    }
+
+    if (haikuInQuestion.author.toString() !== user.userId) {
+      console.error("Unauthorized attempt to edit haiku:", haikuId);
+      return redirect("/");
+    }
+
+    await haikusCollection.findOneAndUpdate({ _id: ObjectId.createFromHexString(haikuId) }, { $set: results.ourHaiku });
+    console.log("Haiku updated successfully:", haikuId);
+
+    return redirect("/");
+  } catch (error) {
+    console.error("Error editing haiku:", error);
+    return { error: "Failed to edit haiku. Please try again later." };
   }
-
-  const results = await sharedHaikuLogic(formData, user)
-
-  if (results.errors.line1 || results.errors.line2 || results.errors.line3) {
-    return { errors: results.errors }
-  }
-
-  // save into db
-  const haikusCollection = await getCollection("haikus")
-  let haikuId = formData.get("haikuId")
-  if (typeof haikuId != "string") haikuId = ""
-
-  // make sure you are the auther of this post, otherwise have operation fail
-  const haikuInQuestion = await haikusCollection.findOne({ _id: ObjectId.createFromHexString(haikuId) })
-  if (haikuInQuestion.author.toString() !== user.userId) {
-    return redirect("/")
-  }
-
-  await haikusCollection.findOneAndUpdate({ _id: ObjectId.createFromHexString(haikuId) }, { $set: results.ourHaiku })
-
-  return redirect("/")
-}
+};

@@ -16,14 +16,6 @@
       "static/chunks/972-21eba39a06dfa682.js",
       "static/chunks/app/layout-596113db0d52b247.js"
     ],
-    "/create-haiku/page": [
-      "static/chunks/webpack-0f0e062c37c73cd2.js",
-      "static/chunks/fd9d1056-7d9b70e9456442b8.js",
-      "static/chunks/117-a0b157415835f483.js",
-      "static/chunks/main-app-be94bf9a70606562.js",
-      "static/chunks/339-f6e88d7e5515bd17.js",
-      "static/chunks/app/create-haiku/page-ce0a0604f8451a6f.js"
-    ],
     "/edit-haiku/[id]/page": [
       "static/chunks/webpack-0f0e062c37c73cd2.js",
       "static/chunks/fd9d1056-7d9b70e9456442b8.js",
@@ -31,6 +23,14 @@
       "static/chunks/main-app-be94bf9a70606562.js",
       "static/chunks/339-f6e88d7e5515bd17.js",
       "static/chunks/app/edit-haiku/[id]/page-80d8f64f6817b47f.js"
+    ],
+    "/create-haiku/page": [
+      "static/chunks/webpack-0f0e062c37c73cd2.js",
+      "static/chunks/fd9d1056-7d9b70e9456442b8.js",
+      "static/chunks/117-a0b157415835f483.js",
+      "static/chunks/main-app-be94bf9a70606562.js",
+      "static/chunks/339-f6e88d7e5515bd17.js",
+      "static/chunks/app/create-haiku/page-ce0a0604f8451a6f.js"
     ],
     "/login/page": [
       "static/chunks/webpack-0f0e062c37c73cd2.js",
